@@ -1,0 +1,100 @@
+app:
+  name: 'APPLICATION_NAME'
+  environment: 'ENVIRONMENT'
+  ruby: 'ruby-X'
+
+hostname: "{{app.name}}.DOMAIN.COM"
+website_url: "{{app.name}}.{{app.environment}}.DOMAIN.COM"
+etc_backup_required: false
+
+configure_db: false
+make_db_superuser: false
+num_thins: 0
+puma_required: true
+
+psql_required: false
+psql_type: web
+psql_version: 13
+psql_max_connections: 100
+
+influxdb_required: false
+memcached_required: false
+mysql_required: false
+redis_required: false
+elasticsearch_required: false
+grafana_required: false
+
+mongodb_required: false
+mongodb_package: mongodb
+mongodb_version: 'X.X'
+
+zsh_version: 5.1.1
+
+munin_slave: true
+
+sidekiq_required: false
+sidekiq6_required: false
+num_sidekiq: 2
+
+resque:
+  workers: 0
+  scheduler: false
+
+global_ruby: 'ruby-X'
+user: 'USERNAME'
+sysadmin_email: 'EMAIL'
+
+nginx:
+  user: 'www-data'
+  group: 'www-data'
+
+password_length: '15'
+password_protect: false
+
+twofactor_required: false
+
+ssl_monit: false
+ssl_munin: false
+
+aws:
+  access_key: 'AWS_KEY'
+  secret: 'AWS_SECRET'
+  region: 'AWS_REGION'
+  bucket: ''
+
+munin_master:
+  ip: 'MASTER_IP'
+  escaped_ip: 'MASTER\.IP'
+  regex: 'MASTER..IP'
+  host: 'MUNIN.HOST'
+
+s3:
+  key: "AWS_KEY"
+  secret: "AWS_SECRET"
+  region: 'AWS_REGION'
+  bucket: 'AWS_BUCKET'
+  mail_from: 'MAIL'
+  mail_address: 'localhost'
+  mail_port: 25
+  mail_authentication: 'none'
+  mail_domain: 'DOMAIN'
+
+monit:
+  server_name: 'MONIT.DOMAIN'
+  master_server_ip: 'MASTER.IP'
+
+grafana:
+  user: 'GRAFANA_USER'
+  password: 'GRAFANA_PASSWORD'
+  port: 8080
+
+gcp_postfix_required: false
+
+sendgrid_password: 'SENDGRID_PASSWORD'
+sendgrid_username: 'APIKEY'
+
+imagemagick_required: false
+
+swap_file_path: /swapfile
+swap_file_size: 4G
+swappiness: 1
